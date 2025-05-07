@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // Redirige toutes les routes vers index.html tout en conservant l'URL
+        var redirectTo = '/'; // Remplace par le chemin de base si ton site est dans un sous-dossier
+
+        // Extrait le chemin courant
+        var currentPath = window.location.pathname + window.location.search + window.location.hash;
+
+        // Redirige vers index.html avec les infos dans l'URL
+        sessionStorage.redirect = currentPath;
+        window.location.replace(redirectTo);
+    </script>
+</head>
+<body>
+<p>Redirection...</p>
+</body>
+</html>
